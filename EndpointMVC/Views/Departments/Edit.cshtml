@@ -1,0 +1,13 @@
+﻿@model EndpointMVC.Models.Department
+
+<h1>Edit Department</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="DepartmentId" />
+    <div>
+        <label>Department Name</label>
+        <input asp-for="DepartmentName" required />
+        <span asp-validation-for="DepartmentName"></span>
+    </div>
+    <button type="submit">Save</button>
+</form>

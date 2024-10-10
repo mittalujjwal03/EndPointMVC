@@ -1,0 +1,25 @@
+﻿@model IEnumerable<EndpointMVC.Models.Department>
+
+<h1>Departments</h1>
+<a asp-action="Create">Create New Department</a>
+<table>
+    <thead>
+        <tr>
+            <th>Department Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var department in Model)
+        {
+            <tr>
+                <td>@department.DepartmentName</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@department.DepartmentId">View</a> |
+                    <a asp-action="Edit" asp-route-id="@department.DepartmentId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@department.DepartmentId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
